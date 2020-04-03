@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
 function SidebarOne() {
-    return <div> Sidebar One </div>;
+  return <div> Sidebar One </div>;
 }
 export default SidebarOne;

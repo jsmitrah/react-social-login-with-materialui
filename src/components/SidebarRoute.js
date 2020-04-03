@@ -113,6 +113,9 @@ export default function PersistentDrawerLeft(props) {
     setMenu(val);
   };
   const onsignOut = () => {
+    localStorage.removeItem("facebookData");
+    localStorage.removeItem("googleData");
+    localStorage.removeItem("LinkedInData");
     history.push("/");
   };
   return (
@@ -177,10 +180,18 @@ export default function PersistentDrawerLeft(props) {
         ) : (
           <div className="text-center">
             <HomePage
-                              googleData={props.location.state &&  props.location.state.googleData}
-                              facebookData={props.location.state && props.location.state.facebookData}
-                              emailLogin={props.location.state &&  props.location.state.emailLogin}
-                              linkedInData={props.location.state &&  props.location.state.linkedInData}
+              googleData={
+                props.location.state && props.location.state.googleData
+              }
+              facebookData={
+                props.location.state && props.location.state.facebookData
+              }
+              emailLogin={
+                props.location.state && props.location.state.emailLogin
+              }
+              linkedInData={
+                props.location.state && props.location.state.linkedInData
+              }
             />
           </div>
         )}

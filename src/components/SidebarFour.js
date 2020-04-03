@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
 function SidebarFour() {
-    return <div> Sidebar four </div>;
+  return <div> Sidebar four </div>;
 }
 export default SidebarFour;

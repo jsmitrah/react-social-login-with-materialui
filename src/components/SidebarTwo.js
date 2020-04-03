@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
 function SidebarTwo() {
-    return <div>Sidebar Two </div>;
+  return <div>Sidebar Two </div>;
 }
 export default SidebarTwo;

@@ -6,7 +6,9 @@ import { history } from "../App";
 function GoogleLogin(props) {
   const classes = useStyles();
   const responseGoogle = response => {
-    history.push("/home", { googleData: response.profileObj });
+    localStorage.setItem("googleData", JSON.stringify(response.profileObj));
+    let localGoogleData = localStorage.getItem("googleData");
+    history.push("/home", { googleData: JSON.parse(localGoogleData) });
   };
   return (
     <div className="footerContent">

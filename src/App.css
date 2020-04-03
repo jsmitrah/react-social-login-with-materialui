@@ -235,13 +235,16 @@
 .cursorPointer {
   cursor: pointer;
 }
-.userDetail{
+.userDetail {
   font-style: italic;
-  padding :10px 0px
+  padding: 10px 0px;
 }
-.userColor{
-  color: darkviolet
+.userColor {
+  color: darkviolet;
 }
-.userMargin{
-margin-top: 10px
+.userMargin {
+  margin-top: 10px;
+}
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+  padding: 6px !important;
 }

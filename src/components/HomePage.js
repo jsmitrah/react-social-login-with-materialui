@@ -1,6 +1,6 @@
 import React from "react";
 import _isEmpty from "lodash/isEmpty";
-import moment from 'moment';
+import moment from "moment";
 
 function HomePage(props) {
   const displayingData = props => {
@@ -36,11 +36,17 @@ function HomePage(props) {
           </div>
           <div className="userMargin">
             <b className="userColor">data_access_expiration_time: </b>
-            <b className="userDetail">{moment(new Date(parseInt(facebookData.data_access_expiration_time, 10) * 1000)).format('DD/MM/YYYY')}</b>
+            <b className="userDetail">
+              {moment(
+                new Date(
+                  parseInt(facebookData.data_access_expiration_time, 10) * 1000
+                )
+              ).format("DD/MM/YYYY")}
+            </b>
           </div>
         </>
       );
-    } else if (!_isEmpty(linkedInData) ) {
+    } else if (!_isEmpty(linkedInData)) {
       return (
         <>
           <div>
@@ -57,11 +63,15 @@ function HomePage(props) {
           </div>
           <div className="userMargin">
             <b className="userColor">Country: </b>
-            <b className="userDetail">{linkedInData.firstName.preferredLocale.country}</b>
+            <b className="userDetail">
+              {linkedInData.firstName.preferredLocale.country}
+            </b>
           </div>
           <div className="userMargin">
             <b className="userColor">Language: </b>
-            <b className="userDetail">{linkedInData.firstName.preferredLocale.language}</b>
+            <b className="userDetail">
+              {linkedInData.firstName.preferredLocale.language}
+            </b>
           </div>
         </>
       );
